@@ -1,0 +1,359 @@
+* {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+
+        .overlayPurple{
+            position: absolute; /* position the overlay absolutely */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color:  #6a0dada4;/* white overlay with 50% transparency */
+    transition: opacity 0.5s; /* add transition effect for 1.5s */
+    display: flex; /* add flexbox layout */
+    justify-content: center; /* center horizontally */
+    align-items: center;
+        }
+
+        header img{
+            width: 100%; /* set the image width to 100% of the container */
+    height: 100%; /* set the image height to 100% of the container */
+    object-fit: cover;
+        }
+
+#experiencia,#educacion,#portafolio,#contacto{
+        height: 100vh;
+        width: 100%;
+        padding: 20px;
+    }
+
+    #experiencia,#portafolio {
+        background-color: #6a0dad;
+    }
+
+    #experiencia h2{
+color:white;
+    }
+
+    #portafolio h2{
+        color:white;
+    }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        .container {
+           width:100%;
+
+           
+        }
+
+        .column{
+            display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items: center;
+        }
+
+        header {
+            text-align: center;
+            overflow: hidden;
+
+    /* shorthand for margin-top, margin-right, margin-left, and margin-bottom */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    height: 700px;
+            background-color: #6a0dad;
+            color: white;
+        }
+
+        .profile-pic {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            margin: 20px 0;
+            border: 5px solid white;
+        }
+
+        h1 {
+            font-size: 2.5em;
+            font-weight: 700;
+            margin: 10px 0;
+        }
+
+        .section-title {
+            color: #6a0dad;
+            font-weight: 700;
+            margin: 20px 0 10px;
+            font-size: 1.8em;
+            text-align: center;
+        }
+
+        p {
+            line-height: 1.6;
+        }
+
+        section {
+            margin-bottom: 50px;
+        }
+
+        .experience, .education {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .experience-item, .education-item {
+            background-color: white;
+            border-radius: 8px;
+            padding: 15px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            flex: 1 1 45%;
+            animation:appear linear;
+            animation-timeline: view();
+            animation-range:entry 0;
+        }
+
+        footer {
+            text-align: center;
+            margin: 50px 0;
+        }
+
+        a {
+            color: #6a0dad;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        form {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+.sobremi{
+height:200px;
+display: flex;
+justify-content: center;
+align-items: center;
+justify-items: center;
+align-content: center;
+flex-direction: column;
+}
+        .sobremi p{
+            text-align: center;
+        }
+
+        input, textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+
+        h3{
+            color: #6a0dad; 
+        }
+
+        input[type="submit"] {
+            background-color: #6a0dad;
+            color: white;
+            border: none;
+            cursor: pointer;
+            padding: 12px;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #570a92;
+        }
+
+        @media (max-width: 768px) {
+            .experience-item, .education-item {
+                flex: 1 1 100%;
+            }
+        }
+
+        @keyframes appear{
+            from{
+                opacity: 0;
+                scale:0.5;
+            }
+            to{
+                opacity: 1;
+                scale:1;
+            }
+        }
+
+        .navbar{
+            border-radius: 50px;
+            border: 1px solid white;
+            color:white;
+            padding: 10px;
+            margin-top: 20px;
+        }
+
+        .portafolio{
+            display: flex;
+            flex-direction: column;
+        }
+
+        #page1{
+            z-index:3;
+        }
+
+        #page2{
+            z-index:2;
+        }
+
+        #page3{
+            z-index:1;
+        }
+
+        .BookContainer{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+        }
+
+        .navbar a{
+            color:white;
+            margin-left: 10px;
+            margin-right: 10px;
+        }
+
+        .book{
+            width:350px;
+            height:450px;
+            position:relative;
+            transition-duration: 1s;
+            perspective: 1500;
+        }
+
+        .cover, .backcover{
+            background-color:#7711c5;
+            width: 100%;
+            height: 100%;
+            border-radius: 0 15px 15px 0;
+            box-shadow: 0 0 5px rgb(41,41,41);
+            display:flex;
+            align-items:center;
+            justify-content: center;
+            transform-origin: center left;
+        }
+
+        .cover{
+            position: absolute;
+            z-index:4;
+
+            transition: transform 1s;
+        }
+
+        .backcover{
+            position: relative;
+            z-index:-1;
+        }
+
+        .page{
+            border-radius: 0 15px 15px 0;
+            position:absolute;
+            width:330px;
+            height:430px;
+/*z-index:1;*/
+background-color:white;
+margin-top:10px;
+transform-origin:left;
+transform-style:preserve-3d;
+transform: rotateY(0deg);
+transition-duration:1.5s;
+        }
+
+
+        .page img{
+            width:100%;
+            height:100%;
+            border-radius: 0 15px 15px 0;
+        }
+
+        .front-page{
+            position: absolute;
+            width:100%;
+            height:100%;
+            backface-visibility: hidden;
+            box-sizing:border-box;
+            padding: 1rem;
+        }
+
+        .back-page{
+            transform: rotateY(180deg);
+            position: absolute;
+            width:100%;
+            height:100%;
+            backface-visibility: hidden;
+            z-index:99;
+        }
+
+        .next, .prev{
+            position: absolute;
+            bottom:1em;
+            cursor:pointer;
+        }
+
+        .next {
+right:1em;
+        }
+        .prev{
+            left:1em;
+        }
+
+      #portafolio input {
+            display: none;
+        }
+.portfolioDescription{
+    color:white;
+    text-align: center;
+    margin-bottom: 20px;
+}
+        #checkbox-cover:checked ~ .book {
+            transform: translateX(200px);
+        }
+
+        #checkbox-cover:checked ~ .book .cover{
+            transition: transform 1.5s, z-index 0.5s 0.5s;
+            transform: rotateY(-180deg);
+            z-index:1;
+        }
+
+        #checkbox-page1:checked ~ .book #page1{
+            transform: rotateY(-180deg);
+            z-index:2;
+        }
+
+        #checkbox-page2:checked ~ .book #page2{
+            transform: rotateY(-180deg);
+            z-index:3;
+        }
+
+        .cover label{
+            width: 100%;
+            height: 100%;
+            cursor:pointer;
+        }
+      
